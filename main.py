@@ -2,8 +2,13 @@
 
 '''This module provides access to the main sensor functions.'''
 
-from temp import read_temp_raw as tmp
+import time
+
+from temp import Temperature
 
 
 if __name__ == '__main__':
-    tmp()
+    t = Temperature()
+    while True:
+        t.write()
+        time.sleep(10)
